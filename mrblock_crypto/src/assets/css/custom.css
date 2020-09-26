@@ -1,0 +1,115 @@
+.center {
+    text-align: center;
+}
+.chicken {
+    background-color: rgb(255, 208, 0);
+    border: solid;
+}
+.h2-crypto {
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+    color: black;
+}
+.crypto-iframe {
+    width: 100%; 
+    height: 300px; 
+    backface-visibility:visible; 
+    text-emphasis-color:black ;
+    margin-bottom: 0px;
+}
+.custom-tranding {
+    padding-top: 20px;
+    width: 100%;
+    height: 104px;
+}
+.crapto-none-move {
+    /* pointer-events: none; */
+}
+.tranding-iframe {
+    box-sizing: border-box;
+    height: calc(72px);
+    width: 100%;
+}
+
+/* social button */
+.fa {
+    margin:15px 5px 5px 0px;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-facebook:before {
+    content: "\f09a";
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-twitter:before {
+    content: "\f099";
+}
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+.fa-google:before {
+    content: "\f1a0";
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-linkedin:before {
+    content: "\f0e1";
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+.fa-youtube:before {
+    content: "\f167";
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.fa-instagram:before {
+    content: "\f16d";
+}
+
+/* Bussiness  part */
+.business {
+    background-color: indianred;
+    border: solid;
+}
+.h4-bussiness {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    color: white;
+}
+.gzFkWf {
+    padding: 5px;
+    font-size: 26px;
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Social part */
+.social-iframe {
+    width: 100%; 
+    height: 300px; 
+    backface-visibility:visible; 
+    text-emphasis-color:black ;
+    margin-bottom: 20px;
+}
+.h2-social {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    color: black;
+}
+.social-news {
+    background-color: yellowgreen;
+    border: solid;
+}

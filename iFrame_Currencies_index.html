@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+  <body>
+    <div id="root"></div>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        .logo {
+            background: white;
+            width: 960px;
+            height: 148px;
+            display: inline-block;
+        }
+
+        iframe {
+            overflow: scroll;
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            text-emphasis-color: black;
+        }
+
+        .box {
+            display: inline-block;
+
+
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .dropdown {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+
+        .topnav {
+            overflow: hidden;
+            background-color: black;
+            text-emphasis-color: white;
+            position: center;
+        }
+
+        .topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 30px;
+            display: table-header-group;
+        }
+
+        .topnav #myLinks {
+            display: none;
+        }
+
+        .dropdown {
+            display: none;
+
+
+        }
+
+        .page {
+            border: 1px;
+            background-color: transparent;
+            padding: inherit;
+        }
+
+        .row {
+            display: flex;
+
+        }
+
+        body {
+            font-size: 16px;
+            color: #fff;
+            font-family: 'Oxygen', sans-serif;
+            background-color: black;
+
+        }
+
+        /** HEADER **/
+        #header-nav {
+            background-color: whitesmoke;
+            border-radius: 0;
+            border: Solid whitesmoke;
+
+        }
+
+        div#container {
+            position: relative;
+            top: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 0px;
+            color: black;
+        }
+
+        h4 {
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: middle;
+            background-color: whitesmoke;
+            text-emphasis-color: black;
+
+        }
+
+
+        span {
+            background-color: black;
+
+        }
+
+        span.chicken {
+            background-color: rgb(255, 208, 0);
+            border: solid;
+        }
+
+        span.Social {
+            background-color: yellowgreen;
+            border: solid;
+        }
+
+        span.Business {
+            background-color: indianred;
+            border: solid;
+        }
+
+        span.beef {
+            background-color: orangered;
+        }
+
+        span {
+            border: solid;
+
+        }
+
+        h3 {
+            text-align: center;
+            font: black;
+            background-color: black;
+            font-family: cursive;
+            font-size: 50px;
+
+
+        }
+
+        h1 {
+            text-align: center;
+            font: black;
+        }
+
+        p {
+            width: 90%;
+            height: 200px;
+            text-align: right;
+            margin-right: auto;
+            margin-left: auto;
+            font-family: Helvetica;
+            color: white;
+            background-color: seashell;
+
+        }
+
+        p.one {
+            overflow: visible;
+            overflow: scroll;
+            width: 100%;
+
+        }
+
+        /* Simple Responsive Framework. */
+        .row {
+            width: 100%;
+        }
+
+        /********** Large devices only **********/
+
+        @media (min-width: 992px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+
+
+            body {
+                font-family: "Lato", sans-serif;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+
+            .col-lg-1,
+            .col-lg-2,
+            .col-lg-3,
+            .col-lg-4,
+            .col-lg-5,
+            .col-lg-6,
+            .col-lg-7,
+            .col-lg-8,
+            .col-lg-9,
+            .col-lg-10,
+            .col-lg-11,
+            .col-lg-12 {
+                float: left;
+                border: 1px solid green;
+
+            }
+
+            .col-lg-1 {
+                width: 8.33%;
+            }
+
+            .col-lg-2 {
+                width: 16.66%;
+            }
+
+            .col-lg-3 {
+                width: 25%;
+            }
+
+            .col-lg-4 {
+                width: 33.33%;
+            }
+
+            .col-lg-5 {
+                width: 41.66%;
+            }
+
+            .col-lg-6 {
+                width: 50%;
+            }
+
+            .col-lg-7 {
+                width: 58.33%;
+            }
+
+            .col-lg-8 {
+                width: 66.66%;
+            }
+
+            .col-lg-9 {
+                width: 74.99%;
+            }
+
+            .col-lg-10 {
+                width: 83.33%;
+            }
+
+            .col-lg-11 {
+                width: 91.66%;
+            }
+
+            .col-lg-12 {
+                width: 100%;
+            }
+        }
+
+        /********** Medium devices only **********/
+        @media (min-width: 768px) and (max-width: 991px) {
+
+            .col-md-1,
+            .col-md-2,
+            .col-md-3,
+            .col-md-4,
+            .col-md-5,
+            .col-md-6,
+            .col-md-7,
+            .col-md-8,
+            .col-md-9,
+            .col-md-10,
+            .col-md-11,
+            .col-md-12 .col {
+                flex: 1;
+                /* additionally, equal width */
+                float: left;
+                padding: 1em;
+                border: solid
+            }
+
+            .col-md-1 {
+                width: 8.33%;
+            }
+
+            .col-md-2 {
+                width: 16.66%;
+            }
+
+            .col-md-3 {
+                width: 25%;
+            }
+
+            .col-md-4 {
+                width: 33.33%;
+            }
+
+            .col-md-5 {
+                width: 41.66%;
+            }
+
+            .col-md-6 {
+                width: 50%;
+            }
+
+            .col-md-7 {
+                width: 58.33%;
+            }
+
+            .col-md-8 {
+                width: 66.66%;
+            }
+
+            .col-md-9 {
+                width: 74.99%;
+            }
+
+            .col-md-10 {
+                width: 83.33%;
+            }
+
+            .col-md-11 {
+                width: 91.66%;
+            }
+
+            .col-md-12 {
+                width: 100%;
+            }
+        }
+
+        /********** mobile devices only **********/
+        @media only screen and (max-width: 767px) {
+
+            .topnav #myLinks {
+                display: none;
+            }
+
+            .topnav a {
+                color: white;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                display: block;
+            }
+
+            .topnav a.icon {
+                background: black;
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .active {
+                background-color: black;
+                color: white;
+            }
+
+            .dropdown {
+                position: center;
+                float: right;
+                text-align: right;
+                width: 100%;
+            }
+
+            .dropdown-menu {
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+                margin-top: 0px !important;
+                width: 100% !important;
+            }
+
+            .topnav {
+                position: relative;
+                background-color: #333;
+                overflow: hidden;
+            }
+
+            .navbar-brand {
+                padding-top: 25px;
+                border: solid;
+
+            }
+
+            .navbar-brand h1 {
+                font-family: 'Lora', serif;
+                color: #557c3e;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                font-weight: bold;
+                text-shadow: 1px 1px 1px #222;
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: .75;
+            }
+
+            .navbar-brand a:hover,
+            .navbar-brand a:focus {
+                text-decoration: none;
+
+            }
+
+            .navbar-brand p span {
+                vertical-align: middle;
+            }
+
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: stretch;
+                width: 100%;
+                text-align: center;
+                right: 0;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: black;
+            }
+
+            .col-sm-1,
+            .col-sm-2,
+            .col-sm-3,
+            .col-sm-4,
+            .col-sm-5,
+            .col-sm-6,
+            .col-sm-7,
+            .col-sm-8,
+            .col-sm-9,
+            .col-sm-10,
+            .col-sm-11,
+            .col-sm-12 {
+                float: left;
+                border: 1px solid black;
+            }
+
+            .row {
+                display: grid;
+                align-items: center;
+            }
+
+            .col-sm-1 {
+                width: 8.33%;
+            }
+
+            .col-sm-2 {
+                width: 16.66%;
+            }
+
+            .col-sm-3 {
+                width: 25%;
+            }
+
+            .col-sm-4 {
+                width: 33.33%;
+            }
+
+            .col-sm-5 {
+                width: 41.66%;
+            }
+
+            .col-sm-6 {
+                width: 50%;
+            }
+
+            .col-sm-7 {
+                width: 58.33%;
+            }
+
+            .col-sm-8 {
+                width: 66.66%;
+            }
+
+            .col-sm-9 {
+                width: 74.99%;
+            }
+
+            .col-sm-10 {
+                width: 83.33%;
+            }
+
+            .col-sm-11 {
+                width: 91.66%;
+            }
+
+            .col-sm-12 {
+                width: 100%;
+            }
+
+            /* Create two equal columns that sits next to each other */
+            .column {
+                flex: 50%;
+                padding: 10px;
+                height: 300px;
+                /* Should be removed. Only for demonstration */
+
+
+            }
+    </style>
+</head>
+
+<body style="background-color:whitesmoke;" width: 100px; height:100px;>
+    <Center>
+
+        <img src="logo.png"> <img>
+    </Center <div class="topnav">
+
+</body>
+<div style="position:right; right:5000px; text-overflow: 20px;">
+    <em href="#" class="fa fa-facebook"></em>
+    <em href="#" class="fa fa-twitter"></em>
+    <em href="#" class="fa fa-google"></em>
+    <em href="#" class="fa fa-linkedin"></em>
+    <em href="#" class="fa fa-youtube"></em>
+    <em href="#" class="fa fa-instagram"></em>
+
+    <div
+        style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;">
+        <div style="height:40px; padding:0px; margin:0px; width: 100%;">
+            <p class="one"><iframe
+                    src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=yes"
+                    width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0"
+                    border="0" style="border:0;margin:0;padding:0;"></iframe>
+        </div>
+        <div
+            style="color: black; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;">
+            <a href="https://coinlib.io" target="_blank"
+                style="font-weight: 500; color: black; text-decoration:none; font-size:11px">Cryptocurrency
+                Prices</a>&nbsp;by Coinlib</div>
+        </p>
+    </div>
+
+    </style>
+    </head>
+
+    <body>
+
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+        <div <section>
+            <div class="dropdown" style="float:left;">
+                <div class="centered" <div id="myLinks">
+                    <center> <a href="#news">Marketplace</a></center>
+                    <center><a href="#contact">Crypto News</a> </center>
+                    <center><a href="#contact">Learning Paths</a> </center>
+                    <center> <a href="#news">Product Reviews</a></center>
+                    <center> <a href="#news">Blockchain Merchandise</a></center>
+
+                </div>
+                <iframe
+                    src="https://lunarcrush-widgets.firebaseapp.com/wordcloud?key=&symbol=BTC&interval=1 Week&animation=false&theme=light"
+                    id="wordcloud" frameBorder="0" border="0" cellspacing="0" scrolling="no"
+                    style="width: 100%; height: 400px;"></iframe>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <!-- End smartphone / tablet look -->
+            </div>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myLinks");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+            </script>
+            </section>
+            </br>
+            <section>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener"
+                            target="_blank"><span>
+                        </a></span></a> </div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                            {
+                                "symbols";
+                                [{
+                                    "proName": "FOREXCOM:SPXUSD",
+                                    "title": "S&P 500"
+                                },
+                                {
+                                    "proName": "FOREXCOM:NSXUSD",
+                                    "title": "Nasdaq 100"
+                                },
+                                {
+                                    "description": "Dow Jones",
+                                    "proName": "NYSE:DOW"
+                                },
+                                {
+                                    "description": "Grayscale BTC",
+                                    "proName": "OTC:GBTC"
+                                },
+                                {
+                                    "description": "Grayscale ETH",
+                                    "proName": "OTC:ETHE"
+                                }
+                                ],
+                                    "colorTheme";
+                                "dark",
+                                    "isTransparent";
+                                false,
+                                    "locale";
+                                "en"
+                            }
+                        </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </section>
+
+
+    </body>
+
+</html>
+
+
+<h1> Breaking News, Prices, and Sentiment </h1>
+<div class="row">
+    <div class="scroll">
+        <div class="container" style="background-color: white;">
+            <div class="page">
+                </br>
+                <div class="container" style="background-color:transparent;">
+                    <div class="page">
+                        <section <center>
+                            <h2><span class="chicken"> Latest Crypto News</span></h2>
+                            </center>
+                            </center>
+                            <iframe
+                                src="https://lunarcrush-widgets.firebaseapp.com/news?key=&symbol=BTC&interval=1 Week&animation=false&theme=light"
+                                id="news-articles" frameBorder="2" border="solid" cellspacing="0" scrolling="yes"
+                                style="width: 100%; height: 200px; backface-visibility:visible; text-emphasis-color:black ;">
+                            </iframe>
+
+
+                            <div class="container" style="background-color:transparent;">
+                                <center>
+                                    <h4> <span class="Business"> Business News </span></h4>
+                                </center>
+                            </div>
+                            <frame>
+                                <div id="widget-news"></div>
+                                <script src="https://softcapital.com/widget/widget.js"></script>
+                                <script>
+                                    createSoftCapitalWidget("News", "widget-news", {
+                                        "symbol": "Dow, SPY, GBTC, ETHE, NDAQ",
+                                        "view": "grid",
+                                        "title": "News",
+                                        "showNews": "5",
+                                        "showImg": true,
+                                        "showTooltip": true,
+                                        "id": "widget-news",
+                                        "css": {
+                                            "grid": {
+                                                "title": "color:red;font-weight:bold",
+                                                "itemTitle": "color:red"
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </frame>
+
+                            <div class="container" style="background-color:visible;">
+                                <div class="box-text-size-adjust">
+                                    <section>
+                                        <h2><span class="Social"> Latest Social News</span></h2>
+                                        </center>
+                                        <p class="one"> <iframe
+                                                src="https://lunarcrush-widgets.firebaseapp.com/social?key=&symbol=BTC&interval=1 Week&animation=false&theme=dark"
+                                                id="social-feed" frameBorder="0" border="0" cellspacing="0"
+                                                scrolling="no" text-color:black
+                                                style="width: 100%; height: 300px;"></iframe>
+                                </div>
+                                </br>
+                                <div>
+                                    <script src="https://widgets.coingecko.com/coingecko-beam-widget.js"></script>
+                                    <coingecko-beam-widget type="all" height="300" locale="en">
+                                    </coingecko-beam-widget>
+                                </div>
+
+                                </br>
+                                <iframe
+                                    src="https://lunarcrush-widgets.firebaseapp.com/galaxy?key=&symbol=BTC&interval=1 Week&animation=false&theme=dark"
+                                    id="galaxy-score" frameBorder="0" border="0" cellspacing="0" scrolling="no"
+                                    style="width: 100%; height: 300px;"></iframe>
+                        </section>
+                    </div>
+
+                    </br>
+                    <div class="container">
+                        <center>
+                            <h2><span class="chicken"> Altcoin Markets </span></h2>
+                        </center>
+                        <script src="https://widgets.coingecko.com/coingecko-coin-heatmap-widget.js"></script>
+                        <coingecko-coin-heatmap-widget height="400" width="100%" locale="en">
+                        </coingecko-coin-heatmap-widget>
+                    </div>
+                    </br>
+                    <div class="container" style="background-color:visible;">
+                        <div
+                            style="height:669px; background-color: #1D2330; overflow:scroll; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38; padding: 0px; margin: 0px; width: 100%;">
+                            <div style="height:649px; padding:0px; margin:0px; width: 100%;"><iframe
+                                    src="https://widget.coinlib.io/widget?type=full_v2&theme=dark&cnt=10&pref_coin_id=1505&graph=no"
+                                    width="100%" height="645px" scrolling="auto" marginwidth="0" marginheight="0"
+                                    frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div>
+                            <div
+                                style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;">
+                                <a href="https://coinlib.io" target="_blank"
+                                    style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency
+                                    Prices</a>&nbsp;by Coinlib</div>
+                        </div>
+                        <script src="https://widgets.coingecko.com/coingecko-coin-compare-chart-widget.js">
+                        </script>
+                        <coingecko-coin-compare-chart-widget
+                            coin-ids="eos,ethereum,litecoin,ripple,chainlink,cardano,stellar,tezos,bitcoin,algorand"
+                            currency="usd" locale="en"></coingecko-coin-compare-chart-widget>
+
+
+                        </br>
+
+                        <div class="container" style="background-color: transparent;">
+                            <div class="page">
+                                <h2><span class="beef">&nbsp; BTC &nbsp;</span></h2>
+                                <script type="text/javascript"
+                                    src="https://files.coinmarketcap.com/static/widget/currency.js">
+                                    </script>
+
+                                <div style="height:100%; background-color: #FFFFFF; overflow:hidden; box-sizing:
+                            border-box; border: 1px solid #56667F; border-radius: 100px; text-align: right;
+                            line-height:14px; font-size: 12px; font-feature-settings: normal;
+                            text-size-adjust:
+                            100%; box-shadow: inset 0 -20px 0 0 #56667F;padding:1px;padding: 0px; margin:
+                            0px;
+                            width: 100%;">
+
+                                    <div style="height:100%; padding:0px; margin:0px; width: 100%;">
+                                        style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size:
+                                        11px;
+                                        box-sizing: border-box; padding: 2px 6px; width: 100%; font-family:
+                                        Verdana,
+                                        Tahoma, Arial, sans-serif;">
+
+                                        <a href="https://coinlib.io" target="_blank"
+                                            style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency
+                                            Prices</a>&nbsp;by Coinlib;
+                                        <div class="one"> <iframe
+                                                src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505"
+                                                width="0" height="100%" scrolling="auto" marginwidth="0"
+                                                marginheight="0" frameborder="0" border="0"
+                                                style="border:0;margin:0;padding:0;line-height:14px;">
+                                                </text-align:left>
+                                            </iframe>
+
+                                            <div style="width: 250px; height:220px; background-color: #FFFFFF;
+                                            overflow:hidden;
+                                            box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px;
+                                             line-height:14px; block-size:220px; font-size: 12px;
+                                            font-feature-settings:
+                                            normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0
+                                            #56667F;padding:1px;padding: 0px; margin: 0px;">
+
+                                                <div style="height:200px; padding:0px; margin:0px; width: 0;">
+                                                    <iframe
+                                                        src="https://widget.coinlib.io/widget?type=single_v2&theme=light&coin_id=859&pref_coin_id=1505"
+                                                        width="250" height="196px" scrolling="auto" marginwidth="0"
+                                                        marginheight="0" frameborder="0" border="0"
+                                                        style="border:0;margin:0;padding:0;line-height:14px;"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="js/jquery-2.1.4.min.js"></script>
+                            <script src="js/bootstrap.min.js"></script>
+                            <script src="js/script.js"></script>
+                            <script type="text/javascript">
+                                baseUrl = "https://widgets.cryptocompare.com/";
+                                var scripts = document.getElementsByTagName("script");
+                                var embedder = scripts[scripts.length - 1];
+                                var cccTheme = {
+                                    "General": {
+                                        "background": "#000"
+                                    },
+                                    "BigPrice": {
+                                        "background": "black",
+                                        "color": "#FFF"
+                                    },
+                                    "SmallPrice": {
+                                        "background": "white smoke",
+                                        "color": "#FFF"
+                                    },
+                                    "Chart": {
+                                        "labelColor": "#FFF"
+                                    }
+                                };
+                                (function () {
+                                    var appName = encodeURIComponent(window.location.hostname);
+                                    if (appName == "") {
+                                        appName = "local";
+                                    }
+                                    var s = document.createElement("script");
+                                    s.type = "text/javascript";
+                                    s.async = true;
+                                    var theUrl = baseUrl + 'serve/v1/coin/header?fsym=BTC&tsyms=USD,EUR,CNY,GBP';
+                                    s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                                    embedder.parentNode.appendChild(s);
+                                })();
+                            </script>
+
+                            </body>
+
+                            </html>
+
+                        }
+                    }
+                }
+            }
+        }
+    }
